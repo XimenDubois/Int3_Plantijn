@@ -34,9 +34,78 @@ body {
   background-color: var(--color-background);
   line-height: 135%;
   font-size: var(--fs-regular);
+  background-image: url('assets/img/grain-background.svg');
+  background-repeat: repeat;
 }
 
 .container {
   max-width: 85%;
   margin: auto;
+}
+
+.title-white {
+  color: var(--color-background);
+}
+
+.title-brown {
+  color: var(--color-title);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: 2vh;
+}
+
+.grey-Btn {
+  background-color: var(--color-second-background);
+  color: var(--color-background);
+}
+
+.grey-Btn:hover {
+  color: var(--color-second-background);
+  border: 1px solid var(--color-second-background);
+}
+
+.brown-Btn {
+  background-color: var(--color-title);
+  color: var(--color-background);
+}
+
+.brown-Btn:hover {
+  border: 1px solid var(--color-title);
+  color: var(--color-title);
+}
+
+button {
+  padding: 1% 0.7% 1% 0.7%;
+  border: none;
+  font-family: var(--font-family);
+  font-size: var(--fs-regular);
+  transition: 0.3s;
+}
+
+button:hover {
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.nav-bar {
+  border-bottom: var(--color-text) solid 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-link {
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.nav-link:hover {
+  transition: 0.3s;
+  border-bottom: 1px solid var(--color-title);
+  color: var(--color-title);
 }
