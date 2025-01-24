@@ -33,14 +33,12 @@ const sentences = {
     12: "Ik kan perfect lezen en schrijven in vier talen"
 };
 
-// Selecteer elementen
 const slider = document.getElementById("ageSlider");
 const ageDisplay = document.getElementById("ageDisplay");
 const sentencesPerAge = document.querySelector(".sentencesPerAge");
 
-// Event listener voor de slider
 slider.addEventListener("input", () => {
     const age = slider.value;
-    ageDisplay.textContent = age; // Update de leeftijdsweergave
-    sentencesPerAge.textContent = sentences[age]; // Update de zin
+    ageDisplay.textContent = age; 
+    sentencesPerAge.textContent = sentences[age]; 
 });

@@ -4,6 +4,14 @@
   --color-second-background: #887C67;
   --color-title: #A88658;
 
+  --fs-sm: clamp(0.6rem, 0.44vi + 0.49rem, 0.84rem);
+  --fs-regular: clamp(0.75rem, 0.67vi + 0.59rem, 1.13rem);
+  --fs-m: clamp(0.94rem, 1.01vi + 0.69rem, 1.5rem);
+  --fs-l: clamp(1.17rem, 1.49vi + 0.81rem, 2rem);
+  --fs-xl: clamp(1.46rem, 2.16vi + 0.94rem, 2.66rem);
+  --fs-xxl: clamp(1.83rem, 3.09vi + 1.08rem, 3.55rem);
+  --fs-xxxl: clamp(2.29rem, 4.4vi + 1.22rem, 4.73rem);
+
   --font-family: "Inria Serif",
     serif;
   --fontweight-title: 700;
@@ -25,6 +33,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 135%;
+  font-size: var(--fs-regular);
 }
 
 .container {
