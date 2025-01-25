@@ -18,21 +18,56 @@
 
 <body>
   <header>
-    <nav class="navigation">
-      <ul class="nav-bar container">
-        <li class="nav-item"><a class="nav-link" href=""><img src="" alt="Plantin Moretus Logo"></a></li>
-        <li class="nav-item"><a class="nav-link" href="">Vestiging Antwerpen</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Impact op de wereld</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Nalatenschap Officina Plantinia</a></li>
-        <li class="nav-item"><button class="button grey-Btn">Bezoek Museum</button></li>
-      </ul>
+    <svg style="display:none">
+      <symbol id="navicon" viewBox="0 0 24 24" fill="#887C67">
+        <path d="M21 11h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1h18c0.6 0 1-0.4 1-1s-0.4-1-1-1z"></path>
+        <path d="M3 7h18c0.6 0 1-0.4 1-1s-0.4-1-1-1h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1z"></path>
+        <path d="M21 17h-18c-0.6 0-1 0.4-1 1s0.4 1 1 1h18c0.6 0 1-0.4 1-1s-0.4-1-1-1z"></path>
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24" fill="#887C67">
+        <path d="M19.1,17.7L6.3,4.9c-.4-.4-1-.4-1.4,0s-.4,1,0,1.4l12.7,12.7c.4.4,1,.4,1.4,0s.4-1,0-1.4Z" />
+        <path d="M6.3,19.1l12.7-12.7c.4-.4.4-1,0-1.4s-1-.4-1.4,0l-12.7,12.7c-.4.4-.4,1,0,1.4s1,.4,1.4,0Z" />
+      </symbol>
+    </svg>
+    <nav class="nav container">
+      <div class="nav-small_hidden">
+        <div class="nav-small">
+          <div>
+            <img src="" alt="logo" class="nav-small_open">
+          </div>
+          <div class="nav-small_open">
+            <a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
+              Bezoek Museum
+            </a>
+          </div>
+          <div>
+            <button class="nav__button" aria-label="Navigation menu" aria-expanded="false"
+              aria-controls="nav__list"><svg role="img" aria-labelledby="svg-title" focusable="false">
+                <title id="svg-title">Menu</title>
+                <use id="iconlink" xlink:href="#navicon"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html"><img src="" alt="logo"></a></li>
+          <li class="nav__item"><a class="nav__link" href="">Vestiging Antwerpen</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Impact op de wereld</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Nalatenschap Officina Plantinia</a></li>
+          <li class="nav__item"><a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
+              Bezoek Museum
+            </a></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
     <section class="header-section container">
       <div class="grid-template">
         <div class="header-text">
-          <h1 class="title-brown">Christoffel Plantijn & Officina Plantinia</h1>
+          <h1 class="title-brown">Christoffel Plantijn <br> & Officina Plantinia</h1>
           <p>Duik in het <strong class="highlight-brown">briljante businessplan van Christoffel Plantijn</strong>, de
             man
             die met zijn strategische visie en
@@ -199,13 +234,13 @@
         <img src="" alt="Polyglot Bijbel">
       </article>
     </section>
-    <section class="daughters-section container">
-      <div class="chapter_Three-quote">
+    <section class="daughters-section">
+      <div class="chapter_Three-quote container">
         <h2>Chapter 3</h2>
         <p class="quote">“Great things in business are never done by one person. They're done by a team of people.”</p>
         <p class="quote-name">~ Steve Jobs ~</p>
       </div>
-      <article class="grid-template">
+      <article class="grid-template container">
         <div>
           <h3 class="title-brown">Plantijn & zijn 6 dochters</h3>
           <p>Plantijn en zijn echtgenote Jeanne Rivière hadden <strong class="highlight-brown">zes dochters</strong>,
@@ -232,7 +267,7 @@
           <p>Belangrijkste dochter</p>
         </div>
       </article>
-      <article>
+      <article class="container">
         <h3 class="title-brown">LeeftijdSlider</h3>
         <p class="sentencesPerAge">Ik</p>
         <div class="slider-container">
@@ -283,9 +318,9 @@
       <button class="grey-Btn button">Trouwen</button>
       <button class="grey-Btn button">Niet Trouwen</button>
     </section>
-    <section>
+    <section class="container">
       <div>
-        <h2 class="title-brown">300 Jaar Officina Plantinia</h2>
+        <h3 class="title-brown">300 Jaar Officina Plantinia</h3>
         <p>Toen Christoffel Plantijn zijn drukkerij overdroeg aan zijn schoonzoon Jan Moretus, legde hij de basis voor
           een
           ongeëvenaard familiebedrijf. De drukkerij bleef maar liefst <strong class="highlight-brown">300 jaar en door 9
@@ -299,12 +334,12 @@
       </div>
       <img src="" alt="Officina Plantinia">
     </section>
-    <section>
-      <h3>Verhalen die geschiedenis ademen</h3>
+    <section class="container">
+      <h3 class="title-brown">Verhalen die geschiedenis ademen</h3>
       <p>Ben je benieuwd naar de <strong class="highlight-brown">boeiende en verrassende verhalen</strong> die het
         museum te bieden heeft? Ontdek ze hier!</p>
     </section>
-    
+
 
   </main>
   <footer>
