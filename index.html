@@ -32,9 +32,7 @@
     <nav class="nav container">
       <div class="nav-small_hidden">
         <div class="nav-small">
-          <div>
-            <img src="" alt="logo" class="nav-small_open">
-          </div>
+          <img class="nav-small_open" src="src/assets/img/logo-w_50.avif" style="width: 50px; height:auto;" alt="Logo">
           <div class="nav-small_open">
             <a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
               Bezoek Museum
@@ -52,36 +50,54 @@
       </div>
       <div class="menu">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="index.html"><img src="" alt="logo"></a></li>
+          <li class="nav__item">
+            <a href="index.html">
+              <picture>
+                <img sizes="(max-width: 60em) 100vw, 80px" srcset="
+            src/assets/img/logo-w_50.avif 50w,
+            src/assets/img/logo-w_80.avif 80w" src="src/assets/img/logo-w_80.avif" alt="Logo">
+              </picture>
+            </a>
+          </li>
           <li class="nav__item"><a class="nav__link" href="">Vestiging Antwerpen</a></li>
           <li class="nav__item"><a class="nav__link" href="">Impact op de wereld</a></li>
           <li class="nav__item"><a class="nav__link" href="">Nalatenschap Officina Plantinia</a></li>
-          <li class="nav__item"><a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
+          <li class="nav__item">
+            <a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
               Bezoek Museum
-            </a></li>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
     <section class="header-section container">
-      <div class="grid-template">
+      <div class="grid-template_textFirst header-grid">
         <div class="header-text">
-          <h1 class="title-brown">Christoffel Plantijn <br> & Officina Plantinia</h1>
-          <p>Duik in het <strong class="highlight-brown">briljante businessplan van Christoffel Plantijn</strong>, de
-            man
+          <h1 class="title-brown header-title">Christoffel Plantijn & <br> Officina Plantinia</h1>
+          <p>Duik in het <strong class="highlight-brown">briljante businessplan van Christoffel Plantijn</strong>, de man
             die met zijn strategische visie en
-            innovatieve
-            aanpak een drukimperium opbouwde dat <strong class="highlight-brown">300 jaar standhield</strong>. Door zijn
-            slimme tactieken, focus op kwaliteit en
-            vooruitstrevende keuzes in kennisverspreiding, legde hij de basis voor een van de meest succesvolle
-            bedrijven
-            van zijn
-            tijd. Een verhaal over ondernemerschap dat zelfs vandaag nog inspireert.</p>
+            innovatieve aanpak een drukimperium opbouwde dat <strong class="highlight-brown">300 jaar standhield</strong>.
+            Door zijn
+            slimme tactieken, focus op kwaliteit en vooruitstrevende keuzes in kennisverspreiding, legde hij de basis voor
+            een van de meest succesvolle bedrijven van zijn tijd. Een verhaal over ondernemerschap dat zelfs vandaag nog
+            inspireert.
+          </p>
         </div>
-        <img class="header-image">
+        <div class="header-image">
+          <picture>
+            <img class="header-image" sizes="(max-width: 625px) 100vw, 625px" srcset="
+                  src/assets/img/Header-Plantijn-w_small.avif 323w,
+                  src/assets/img/Header-Plantijn-w_medium.avif 489w,
+                  src/assets/img/Header-Plantijn-w_large.avif 625w" src="src/assets/img/Header-Plantijn-w_large.avif"
+              alt="Plantijn Hero Image">
+          </picture>
+        </div>
       </div>
-      <button class="readmore-btn">Read more</button>
+
+
+      <button class="readmore-btn">Lees meer</button>
       <img alt="Kathedraal Antwerpen">
       <div class="chapter_One-quote">
         <h2>Chapter 1</h2>
@@ -216,7 +232,8 @@
         <img src="" alt="Polyglot gate">
         <div>
           <h3 class="title-white">De Polyglot Bijbel</h3>
-          <p class="text-white">Deze bijzondere bijbel markeerde een belangrijke doorbraak in Plantijns carrière.
+          <p class="text-white polyglotBijbel-text">Deze bijzondere bijbel markeerde een belangrijke doorbraak in
+            Plantijns carrière.
             Het
             werk was niet alleen uniek
             vanwege

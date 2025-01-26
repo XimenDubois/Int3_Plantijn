@@ -6,7 +6,7 @@ const init = () => {
     const $navMenu = document.querySelector('.menu');
     const $iconLink = document.querySelector('#iconlink');
     const listItems = $navList.querySelectorAll("li a");
-    const $navSmallElements = document.querySelectorAll('.nav-small_open'); 
+    const $navSmallElements = document.querySelectorAll('.nav-small_open');
 
     console.log(listItems);
 
