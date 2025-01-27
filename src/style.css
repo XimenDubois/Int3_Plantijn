@@ -18,6 +18,10 @@
   --fontweight-title: 700;
   --fontweight-body: 400;
 
+  --whitespace-s: 1vh;
+  --whitespace-regular: 3vh;
+  --whitespace-medium: 5vh;
+  --whitespace-l: 10vh;
 }
 
 html {
@@ -71,6 +75,7 @@ body,
   align-items: center;
   display: grid;
   justify-items: center;
+  gap: 2vw;
 }
 
 .grid-template_textFirst {
@@ -107,7 +112,13 @@ body,
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  align-items: center;
+  margin: var(--whitespace-l) 0;
+}
+
+.chapter_One-quote,
+.chapter_Two-quote,
+.chapter_Three-quote {
+  text-align: center;
 }
 
 h2 {
@@ -243,36 +254,7 @@ h3 {
   display: none;
 }
 
-@media screen and (max-width: 60em) {
-  .nav {
-    width: 100vw;
-  }
 
-  .hambergerMenu-Btn,
-  .nav__button {
-    display: block;
-  }
-
-  .nav__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5vh;
-  }
-
-  .nav-Btn {
-    white-space: nowrap;
-    padding: 1vh;
-  }
-  .header-grid{
-    display: flex;
-    flex-direction: column;
-    }
-  .header-title{
-    text-align: center;
-  }
-}
 
 .nav-small {
   background-color: var(--color-background);
@@ -299,6 +281,7 @@ h3 {
   color: var(--color-second-background);
   padding: 1vh;
   transition: 0.2s ease-in-out;
+  text-align: center;
 }
 
 .readmore-btn:hover {
@@ -306,13 +289,49 @@ h3 {
   transition: 0.2s ease-in-out;
 }
 
+.readmore-btn_container {
+  margin: 2vh 0vh;
+  display: flex;
+  justify-content: center;
+}
+
 .header-text {
   display: flex;
   flex-direction: column;
 }
 
+.grid-template_kathedraal,
+.grid-template_antwerp-statue {
+  display: grid;
+  grid-template-columns: 35vw 55vw;
+}
+
+.grid-template_kathedraal {
+  display: grid;
+  grid-template-columns: 35vw 55vw;
+  align-items: center;
+  margin: -1vh -1vh;
+}
+
+.grid-template_antwerp-statue {
+
+  align-items: center;
+}
+
+.statue-antwerp_img {
+  margin-bottom: -0.7vh;
+}
+
+.enveloppe {
+  cursor: pointer;
+}
+
 .moving-section {
   background-color: var(--color-second-background);
+}
+
+.moving-article {
+  padding-top: 10vh;
 }
 
 .netwerk-container {
@@ -326,4 +345,110 @@ h3 {
 .polyglotBijbel-container {
   display: grid;
   grid-template-columns: repeat(3, 35%);
+}
+
+.stories-text {
+  text-align: center;
+}
+
+footer {
+  background-color: var(--color-second-background);
+  background-image: url('assets/img/grain-background.svg');
+}
+
+.footer_list-container {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-background);
+  justify-content: space-around;
+  padding: 5vh 0;
+  align-items: center;
+}
+
+.footer_titles {
+  font-weight: 700;
+  margin-bottom: 1vh;
+  text-transform: uppercase;
+}
+
+.footer_link {
+  color: var(--color-background);
+  text-decoration: none;
+}
+
+.footer_item {
+  margin-bottom: var(--whitespace-small);
+}
+
+@media screen and (max-width: 60em) {
+  .nav {
+    width: 100vw;
+  }
+
+  .hambergerMenu-Btn,
+  .nav__button {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+
+  .nav-Btn {
+    white-space: nowrap;
+    padding: 1vh;
+  }
+
+  .header-grid,
+  .grid-template_textFirst {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-template_antwerp-statue {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .netwerk-container {
+    max-width: 100%
+  }
+
+  .header-title {
+    text-align: center;
+  }
+
+  .footer_list-container {
+    flex-direction: column;
+  }
+
+  .footer_list {
+    border-bottom: 1px var(--color-background) solid;
+    width: 100%;
+  }
+
+  .footer_item {
+    text-align: center;
+    margin-bottom: var(--whitespace-small);
+  }
+
+  .footer_titles {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 1vh 0;
+  }
+
+  .footer_titles:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+  }
+
+  .footer_link:hover {
+    transition: 0.3s ease-in-out;
+    border-bottom: var(--color-background) solid 1px;
+  }
 }

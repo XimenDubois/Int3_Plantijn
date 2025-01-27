@@ -76,10 +76,14 @@ const init = () => {
         }
     });
 }
+///////Enveloppe en Postcard
+const $enveloppe = document.querySelector('.enveloppe');
+const $postcard = document.querySelector('.postcard');
+$enveloppe.addEventListener('click', function () {
+    $enveloppe.classList.add("hidden");
+    $postcard.classList.remove('hidden');
+});
 
-
-
-init();
 ///////lettertype veranderen bij PolyGlot Bijbel
 const styles = [
     { font: 'Roboto, sans-serif', text: 'Hebreeuwse Typo' },
@@ -123,3 +127,41 @@ slider.addEventListener("input", () => {
     ageDisplay.textContent = age;
     sentencesPerAge.textContent = sentences[age];
 });
+
+// Functie om de hidden klasse toe te voegen aan alle <dd>'s
+function updateHiddenState() {
+    const allDDs = document.querySelectorAll('.footer_item');
+    const isSmallScreen = window.matchMedia('(max-width: 60em)').matches;
+
+    allDDs.forEach(dd => {
+        if (isSmallScreen) {
+            dd.classList.add('hidden'); // Voeg de hidden klasse toe
+        } else {
+            dd.classList.remove('hidden'); // Verwijder de hidden klasse als scherm groter is
+        }
+    });
+}
+
+// Functie om de hidden klasse te toggelen op klikken
+function toggleDD(event) {
+    const parentDL = event.target.closest('dl');
+    const ddItems = parentDL.querySelectorAll('.footer_item');
+
+    ddItems.forEach(dd => {
+        dd.classList.toggle('hidden'); // Toggle de hidden klasse
+    });
+}
+
+// Event listener voor de schermgrootte
+window.addEventListener('resize', updateHiddenState);
+
+// Event listener voor klikken op <dt> of <h4>
+const allDTs = document.querySelectorAll('.footer_list dt');
+allDTs.forEach(dt => {
+    dt.addEventListener('click', toggleDD);
+});
+
+// Initialiseer de hidden klasse bij paginalaad
+updateHiddenState();
+
+init();
