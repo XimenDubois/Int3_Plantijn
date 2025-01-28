@@ -7,8 +7,9 @@ const init = () => {
     const $iconLink = document.querySelector('#iconlink');
     const listItems = $navList.querySelectorAll("li a");
     const $navSmallElements = document.querySelectorAll('.nav-small_open');
+    const $polyglotBijbel = document.querySelector('.polyglot-bijbel_image');
 
-    console.log(listItems);
+    console.log($polyglotBijbel);
 
     const hambergerMediaQuery = window.matchMedia("(max-width: 60em)");
     const handleMediaQuery = (event) => {
@@ -16,22 +17,17 @@ const init = () => {
             $navButton.classList.remove('hidden');
             $navSmall.classList.remove('hidden');
             $navMenu.classList.add("hidden");
+            $polyglotBijbel.classList.add("hidden");
         } else {
             $navButton.classList.add('hidden');
             $navMenu.classList.remove("hidden");
             $navSmall.classList.add('hidden');
+            $polyglotBijbel.classList.remove("hidden");
         }
     };
-    hambergerMediaQuery.addEventListener("change", (event) => {
-        if (event.matches) {
-            console.log("Mediaquery actief: scherm is kleiner dan 60em.");
-        } else {
-            console.log("Mediaquery inactief: scherm is groter dan 60em.");
-        }
-    });
 
     handleMediaQuery(hambergerMediaQuery);
-    hambergerMediaQuery.addEventListener("change", handleMediaQuery);
+    hambergerMediaQuery.addEventListener('change', handleMediaQuery);
 
     const openNavigation = () => {
         $navButton.setAttribute("aria-expanded", "true");

@@ -26,6 +26,11 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -141,6 +146,7 @@ h2,
 
 .quote {
   font-size: var(--fs-l);
+  line-height: 130%;
 }
 
 h1,
@@ -172,7 +178,6 @@ h3 {
   white-space: nowrap;
   background-color: var(--color-second-background);
   color: var(--color-background);
-  text-decoration: none;
   border: none;
   padding: 1.5vh 2vh;
   transition: 0.3s ease-in-out;
@@ -213,7 +218,6 @@ h3 {
 
 .nav__link {
   transition: 0.3s ease-in-out;
-  text-decoration: none;
   color: var(--color-text);
 }
 
@@ -271,14 +275,17 @@ h3 {
   margin-top: 2vh;
 }
 
+.readmore-link {
+  color: var(--color-text);
+  font-style: italic;
+}
+
 .readmore-btn {
   background-color: transparent;
   border: none;
   border-bottom: var(--color-second-background) 1px solid;
   font-size: var(--fs-m-regular);
   font-family: var(--font-family);
-  font-style: italic;
-  color: var(--color-second-background);
   padding: 1vh;
   transition: 0.2s ease-in-out;
   text-align: center;
@@ -330,8 +337,47 @@ h3 {
   background-color: var(--color-second-background);
 }
 
+.worldOnAString-Container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--whitespace-l);
+}
+
+.worldOnAString-img {
+  margin: -15vh -10vh 0 0;
+  z-index: 1;
+}
+
+.worldText-container {
+  margin-top: -25vh;
+}
+
+.world-text {
+  width: 45vw;
+}
+
+.Impact-op-de-wereld_container,
+.koninklijkeDrukker-article {
+  margin-top: var(--whitespace-l);
+  margin-bottom: var(--whitespace-l);
+}
+
 .moving-article {
   padding-top: 10vh;
+}
+
+.motherdaughter_grid {
+  display: flex;
+  flex-direction: row;
+  gap: var(--whitespace-l);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.motherdaughter_grid-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .netwerk-container {
@@ -340,11 +386,52 @@ h3 {
 
 .polyglotBijbel-section {
   background-color: var(--color-second-background);
+  padding: var(--whitespace-l);
 }
 
 .polyglotBijbel-container {
   display: grid;
-  grid-template-columns: repeat(3, 35%);
+  grid-template-columns: 25% 45% 25%;
+  justify-items: center;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.polyglotBijbel-text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.polyglotBijbel-text {
+  margin-bottom: var(--whitespace-regular);
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.slider {
+  background: var(--color-text);
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.YearOfPlantinia-btn {
+  margin-top: var(--whitespace-s);
+
+}
+
+.YearOfPlantinia-btnLink {
+  color: var(--color-background);
+
+}
+
+.YearOfPlantinia-btnLink:hover {
+  color: var(--color-text);
 }
 
 .stories-text {
@@ -354,6 +441,12 @@ h3 {
 footer {
   background-color: var(--color-second-background);
   background-image: url('assets/img/grain-background.svg');
+  padding-bottom: var(--whitespace-regular);
+}
+
+.footer_link:hover {
+  transition: 0.3s ease-in-out;
+  border-bottom: var(--color-background) solid 1px;
 }
 
 .footer_list-container {
@@ -365,6 +458,16 @@ footer {
   align-items: center;
 }
 
+.footer_list-socials {
+  margin-top: var(--whitespace-regular);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--whitespace-l);
+  justify-content: center;
+  align-items: center;
+}
+
 .footer_titles {
   font-weight: 700;
   margin-bottom: 1vh;
@@ -373,16 +476,41 @@ footer {
 
 .footer_link {
   color: var(--color-background);
-  text-decoration: none;
 }
 
 .footer_item {
   margin-bottom: var(--whitespace-small);
 }
 
+@media screen and (max-width: 1200px) {
+  .worldText-container {
+    margin-top: 0vh;
+  }
+
+  .world-text {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 60em) {
+
+  h1,
+  h3 {
+    margin-bottom: var(--whitespace-s);
+  }
+
   .nav {
     width: 100vw;
+  }
+
+  .YearOfPlantinia-btn {
+    margin-bottom: var(--whitespace-regular);
+    width: 100%;
+  }
+
+  .grid-template_imgFirst {
+    display: flex;
+    flex-direction: column;
   }
 
   .hambergerMenu-Btn,
@@ -414,12 +542,32 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .typo-Btn {
+    width: 100%;
+  }
+
   .netwerk-container {
     max-width: 100%
   }
 
   .header-title {
     text-align: center;
+  }
+
+  .polyglotBijbel-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .motherdaughter_grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .footer_list-container {
@@ -433,7 +581,7 @@ footer {
 
   .footer_item {
     text-align: center;
-    margin-bottom: var(--whitespace-small);
+    margin-bottom: var(--whitespace-regular);
   }
 
   .footer_titles {
@@ -446,9 +594,10 @@ footer {
     transform: scale(1.02);
     transition: 0.3s ease-in-out;
   }
-
-  .footer_link:hover {
-    transition: 0.3s ease-in-out;
-    border-bottom: var(--color-background) solid 1px;
-  }
+    .footer_list-socials {
+      gap: var(--whitespace-regular);
+      max-width: 75%;
+      align-content: center;
+      margin: auto;
+    }
 }

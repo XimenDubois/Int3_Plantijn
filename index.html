@@ -59,9 +59,10 @@
               </picture>
             </a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="">Vestiging Antwerpen</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Impact op de wereld</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Nalatenschap Officina Plantinia</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Vestiging-Antwerpen">Vestiging Antwerpen</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Impact-op-de-wereld">Impact op de wereld</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Nalatenschap-Officina-Plantinia">Nalatenschap Officina
+              Plantinia</a></li>
           <li class="nav__item">
             <a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
               Bezoek Museum
@@ -99,11 +100,11 @@
         </div>
       </div>
       <div class="readmore-btn_container">
-        <button class="readmore-btn">Lees meer</button>
+        <button class="readmore-btn"><a class="readmore-link" href="#Vestiging-Antwerpen">Lees meer</a></button>
       </div>
 
     </section>
-    <section class="grid-template_kathedraal">
+    <section class="grid-template_kathedraal" id="Vestiging-Antwerpen">
       <picture>
         <img sizes="(max-width: 583px) 100vw, 583px" srcset="
       src/assets/img/Antwerpen-Kathedraal-w_small.avif 226w,
@@ -174,15 +175,25 @@
       <div>
       </div>
     </section>
-    <section class="worldwide-section">
-      <div class="chapter_Two-quote">
-        <h2>Chapter 2.1</h2>
-        <p class="quote">“Go global or go home...”</p>
-        <p class="quote-name">~ Unknown ~</p>
+    <section class="worldwide-section" id="Impact-op-de-wereld">
+      <div class="worldOnAString-Container">
+        <div class="chapter_Two-quote">
+          <h2>Chapter 2.1</h2>
+          <p class="quote">“Go global or go home...”</p>
+          <p class="quote-name">~ Unknown ~</p>
+        </div>
+        <picture class="worldOnAString-img">
+          <img sizes="(max-width: 620px) 100vw, 620px" srcset="
+                  src/assets/img/PuppetWorld-w_small.avif 185w,
+                  src/assets/img/PuppetWorld-w_medium.avif 440w,
+                  src/assets/img/PuppetWorld-w_large.avif 620w" src="src/assets/img/PuppetWorld-w_large.avif"
+            alt="arm with world on a string">
+        </picture>
       </div>
-      <article class="container">
+      <article class="worldText-container container">
         <h3 class="title-brown">Op wereldniveau</h3>
-        <p>Een locatie kiezen voor je bedrijf is één ding, maar je bedrijf wereldwijd bekend maken is een heel ander
+        <p class="world-text">Een locatie kiezen voor je bedrijf is één ding, maar je bedrijf wereldwijd bekend maken is
+          een heel ander
           verhaal.
           Christoffel Plantijn begreep dit als geen ander. Vanuit Antwerpen bouwde hij niet alleen een succesvol
           bedrijf,
@@ -194,8 +205,7 @@
           strategische stappen die Plantijn zette om dit succes te bereiken?
         </p>
       </article>
-      <img src="" alt="Arm with world on a string">
-      <article class="container grid-template_textFirst">
+      <article class="container grid-template_textFirst Impact-op-de-wereld_container">
         <picture>
           <img sizes="(max-width: 600px) 100vw, 600px" srcset="
         src/assets/img/PlantijnGrootPubliek-w_small.avif 305w,
@@ -221,14 +231,14 @@
             <span class="highlight-brown">Feitje: Christoffel Plantijn heeft het woordenbuik uitgevonden</span>
           </p>
         </div>
+      </article>
+      <article class="container" id="samenwerkingMetBekenden">
         <div class="chapter_Two-quote">
           <h2>Chapter 2.2</h2>
           <p class="quote">““If you do build a great experience, customers tell each other about that. Word of mouth is
             very powerful.””</p>
           <p class="quote-name">~ Jeff Bazos ~</p>
         </div>
-      </article>
-      <article class="container">
         <img src="" alt="Erasmus network">
         <div class="netwerk-container">
           <h3 class="title-brown">Samenwerking met bekenden</h3>
@@ -244,7 +254,7 @@
             een sleutelfiguur in de verspreiding van kennis en ideeën.</p>
         </div>
       </article>
-      <article class="container grid-template_textFirst">
+      <article class="container grid-template_textFirst koninklijkeDrukker-article">
         <picture>
           <img sizes="(max-width: 600px) 100vw, 600px" srcset="
                 src/assets/img/KoninklijkeDrukker-w_small.avif 305w,
@@ -271,9 +281,15 @@
       </article>
     </section>
     <section class="polyglotBijbel-section">
-      <article class="polyglotBijbel-container container">
-        <img src="" alt="Polyglot gate">
-        <div>
+      <article class="polyglotBijbel-container">
+        <picture>
+          <img sizes="(max-width: 320px) 100vw, 320px" srcset="
+        src/assets/img/PolyglotBijbelPoort-w_small.avif 190w,
+        src/assets/img/PolyglotBijbelPoort-w_medium.avif 261w,
+        src/assets/img/PolyglotBijbelPoort-w_large.avif 320w" src="src/assets/img/PolyglotBijbelPoort-w_large.avif"
+            alt="Polyglot Gate">
+        </picture>
+        <div class="polyglotBijbel-text_container">
           <h3 class="title-white">De Polyglot Bijbel</h3>
           <p class="text-white polyglotBijbel-text">Deze bijzondere bijbel markeerde een belangrijke doorbraak in
             Plantijns carrière.
@@ -289,18 +305,24 @@
             een
             titel
             die zijn vakmanschap en invloed in de drukwereld bekroonde. </p>
-          <button id="changeFont-Btn" class="brown-Btn button">Hebreeuwse Typ</button>
+          <button id="changeFont-Btn" class="brown-Btn button typo-Btn">Hebreeuwse Typ</button>
         </div>
-        <img src="" alt="Polyglot Bijbel">
+        <picture class="polyglot-bijbel_image">
+          <img sizes="(max-width: 320px) 100vw, 320px" srcset="
+          src/assets/img/Polyglot_Bijbel-w_small.avif 190w,
+          src/assets/img/Polyglot_Bijbel-w_medium.avif 261w,
+          src/assets/img/Polyglot_Bijbel-w_large.avif 320w" src="src/assets/img/Polyglot_Bijbel-w_large.avif"
+            alt="Polyglot Bible">
+        </picture>
       </article>
     </section>
-    <section class="daughters-section">
+    <section class="daughters-section" id="Nalatenschap-Officina-Plantinia">
       <div class="chapter_Three-quote">
         <h2>Chapter 3</h2>
         <p class="quote">“Great things in business are never done by one person. They're done by a team of people.”</p>
         <p class="quote-name">~ Steve Jobs ~</p>
       </div>
-      <article class="grid-template container">
+      <article class="grid-template_imgFirst container">
         <div>
           <h3 class="title-brown">Plantijn & zijn 6 dochters</h3>
           <p>Plantijn en zijn echtgenote Jeanne Rivière hadden <strong class="highlight-brown">zes dochters</strong>,
@@ -320,19 +342,35 @@
             eveneens dreef.
           </p>
         </div>
-        <div>
-          <img src="" alt="Jeanne">
-          <p>De moeder</p>
-          <img src="" alt="Martina">
-          <p>Belangrijkste dochter</p>
+        <div class="motherdaughter_grid">
+          <div class="motherdaughter_grid-names">
+            <picture>
+              <img sizes="(max-width: 205px) 100vw, 205px" srcset="
+          src/assets/img/Jeanne_Rivière-w_small.avif 145w,
+          src/assets/img/Jeanne_Rivière-w_large.avif 205w" src="src/assets/img/Jeanne_Rivière-w_large.avif"
+                alt="Jeanne">
+            </picture>
+            <p>De moeder</p>
+          </div>
+          <div class="motherdaughter_grid-names">
+            <picture>
+              <img sizes="(max-width: 205px) 100vw, 205px" srcset="
+                    src/assets/img/Martina_Painting-w_small.avif 145w,
+                    src/assets/img/Martina_Painting-w_large.avif 205w"
+                src="src/assets/img/Martina_Painting-w_large.avif" alt="Martina">
+            </picture>
+            <p>Belangrijkste dochter</p>
+          </div>
         </div>
       </article>
-      <article class="container">
-        <h3 class="title-brown">LeeftijdSlider</h3>
+      <article class="slider-container container">
+        <h4 class="hidden">Age slider</h4>
         <p class="sentencesPerAge">Ik</p>
-        <div class="slider-container">
+        <div>
           <input type="range" min="4" max="12" value="4" class="slider" id="ageSlider" />
-          <p><span id="ageDisplay">4</span> jaar</p>
+        </div>
+        <div>
+          <p><span id="ageDisplay">4 </span> jaar</p>
         </div>
       </article>
       <article class="container grid-template">
@@ -391,6 +429,9 @@
             Plantin-Moretus in Antwerpen</strong>, waar zijn
           erfenis nog
           altijd tot leven komt!</p>
+        <button class="button grey-Btn YearOfPlantinia-btn"><a class="YearOfPlantinia-btnLink"
+            href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">Bezoek
+            Museum</a></button>
       </div>
       <picture>
         <img sizes="(max-width: 531px) 100vw, 531px" srcset="
@@ -407,8 +448,6 @@
           museum te bieden heeft? Ontdek ze hier!</p>
       </div>
     </section>
-
-
   </main>
   <footer>
     <div class="footer_list-container container">
@@ -424,7 +463,8 @@
         </dt>
         <dd class="footer_item"><a class="footer_link" href="">Wat is er te zien?</a></dd>
         <dd class="footer_item"><a class="footer_link" href="">Over het museum</a></dd>
-        <dd class="footer_item"><a class="footer_link" href="">Plan je bezoek</a></dd>
+        <dd class="footer_item"><a class="footer_link"
+            href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">Plan je bezoek</a></dd>
         <dd class="footer_item"><a class="footer_link" href="">Collectie & onderzoek</a></dd>
         <dd class="footer_item"><a class="footer_link" href="">Wat is er te zien?</a></dd>
       </dl>
@@ -433,22 +473,82 @@
         <dt>
           <h4 class="footer_titles">Chapters</h4>
         </dt>
-        <dd class="footer_item"><a class="footer_link" href="">Chapter 1</a></dd>
-        <dd class="footer_item"><a class="footer_link" href="">Chapter 2.1</a></dd>
-        <dd class="footer_item"><a class="footer_link" href="">Chapter 2.2</a></dd>
-        <dd class="footer_item"><a class="footer_link" href="">Chapter 3</a></dd>
+        <dd class="footer_item"><a class="footer_link" href="#Vestiging-Antwerpen">Chapter 1</a></dd>
+        <dd class="footer_item"><a class="footer_link" href="#Impact-op-de-wereld">Chapter 2.1</a></dd>
+        <dd class="footer_item"><a class="footer_link" href="#samenwerkingMetBekenden">Chapter 2.2</a></dd>
+        <dd class="footer_item"><a class="footer_link" href="#Nalatenschap-Officina-Plantinia">Chapter 3</a></dd>
       </dl>
 
       <dl class="footer_list">
         <dt>
           <h4 class="footer_titles ">Contactgegevens</h4>
         </dt>
-        <dd class="footer_item"><span class="footer_link">Vrijdagmarkt 22</dd>
-        <dd class="footer_item"><span class="footer_link">2000 Antwerpen</span></dd>
-        <dd class="footer_item"><span class="footer_link">+32 (0)3 221 14 50</span></dd>
-        <dd class="footer_item"><span class="footer_link">museum.plantin.moretus@antwerpen.be</span></dd>
+        <dd class="footer_item"><span>Vrijdagmarkt 22</dd>
+        <dd class="footer_item"><span>2000 Antwerpen</span></dd>
+        <dd class="footer_item"><span>+32 (0)3 221 14 50</span></dd>
+        <dd class="footer_item"><span>museum.plantin.moretus@antwerpen.be</span></dd>
       </dl>
     </div>
+    <ul class="footer_list-socials">
+      <li class="footer_item-socials"><a href="https://www.facebook.com/museumplantinmoretus/">
+          <picture>
+            <img sizes="(max-width: 20px) 100vw, 20px" srcset="
+      src/assets/img/Facebook-w_small.svg 15w,
+      src/assets/img/Facebook-w_large.svg" src="src/assets/img/Facebook-w_large.svg" alt="Facebook">
+          </picture>
+        </a></dd>
+      <li class="footer_item-socials"><a href="">
+          <picture>
+            <img sizes="(max-width: 36px) 100vw, 36px" srcset="
+      src/assets/img/Instagram-w_small.svg 20w,
+      src/assets/img/Instagram-w_large.svg 36w" src="src/assets/img/Instagram-w_large.svg" alt="Instagram">
+          </picture>
+        </a></li>
+      <li class="footer_item-socials"><a href="">
+          <picture>
+            <img sizes="(max-width: 40px) 100vw, 40px" srcset="
+      src/assets/img/Mail-w_small.svg 22w,
+      src/assets/img/Mail-w_large.svg 40w" src="src/assets/img/Mail-w_large.svg" alt="Mail">
+          </picture>
+        </a></li>
+      <li class="footer_item-socials"><a href="https://soundcloud.com/user-344671023">
+          <picture>
+            <img sizes="(max-width: 52px) 100vw, 52px" srcset="
+      src/assets/img/Soundcloud-w_small.svg 28w,
+      src/assets/img/Soundcloud-w_large.svg 52w" src="src/assets/img/Soundcloud-w_large.svg" alt="Soundcloud">
+          </picture>
+        </a></li>
+      <li class="footer_item-socials"><a
+          href="https://www.tripadvisor.com/Attraction_Review-g188636-d242684-Reviews-Museum_Plantin_Moretus-Antwerp_Antwerp_Province.html">
+          <picture>
+            <img sizes="(max-width: 45px) 100vw, 45px" srcset="
+      src/assets/img/Tripadviser-w_small.svg 25w,
+      src/assets/img/Tripadviser-w_large.svg 45w" src="src/assets/img/Tripadviser-w_large.svg" alt="Tripadviser">
+          </picture>
+        </a></li>
+      <li class="footer_item-socials"><a href="https://www.youtube.com/user/PlantinMoretusmuseum">
+          <picture>
+            <img sizes="(max-width: 45px) 100vw, 45px" srcset="
+      src/assets/img/Youtube-w_small.svg 23w,
+      src/assets/img/Youtube-w_large.svg 45w" src="src/assets/img/Youtube-w_large.svg" alt="Youtube">
+          </picture>
+        </a></li>
+      <li class="footer_item-socials"><a href="https://medium.com/@museumplantinmoretus">
+          <picture>
+            <img sizes="(max-width: 45px) 100vw, 45px" srcset="
+      src/assets/img/Medium-w_small.svg 25w,
+      src/assets/img/Medium-w_large.svg 45w" src="src/assets/img/Medium-w_large.svg" alt="Medium">
+          </picture>
+        </a>
+      </li>
+      <li class="footer_item-socials"><a href="https://www.pinterest.com/plantinmoretus/">
+          <picture>
+            <img sizes="(max-width: 31px) 100vw, 31px" srcset="
+            src/assets/img/Pintrest-w_small.svg 17w,
+            src/assets/img/Pintrest-w_large.svg 31w" src="src/assets/img/Pintrest-w_large.svg" alt="Pintrest">
+          </picture>
+        </a></li>
+    </ul>
   </footer>
   <script type="module" src="script.js"></script>
 </body>
