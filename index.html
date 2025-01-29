@@ -12,7 +12,11 @@
     href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.1/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="icon" type="image/svg+xml" href="src/assets/img/Whitelogo-w_large.avif" />
   <title>Christoffel Plantijn</title>
 </head>
 
@@ -32,7 +36,7 @@
     <nav class="nav container">
       <div class="nav-small_hidden">
         <div class="nav-small">
-          <img class="nav-small_open" src="src/assets/img/logo-w_50.avif" style="width: 50px; height:auto;" alt="Logo">
+          <img class="nav-small_open" src="src/assets/img/Smallnav-logo.svg" alt="Logo">
           <div class="nav-small_open">
             <a class="nav-Btn" href="https://museumplantinmoretus.be/nl/content/plan-je-bezoek">
               Bezoek Museum
@@ -53,7 +57,7 @@
           <li class="nav__item">
             <a href="index.html">
               <picture>
-                <img sizes="(max-width: 60em) 100vw, 80px" srcset="
+                <img style="max-width: 50px; height: auto;" sizes="(max-width: 60em) 100vw, 80px" srcset="
             src/assets/img/logo-w_50.avif 50w,
             src/assets/img/logo-w_80.avif 80w" src="src/assets/img/logo-w_80.avif" alt="Logo">
               </picture>
@@ -239,19 +243,22 @@
             very powerful.””</p>
           <p class="quote-name">~ Jeff Bazos ~</p>
         </div>
-        <img src="" alt="Erasmus network">
-        <div class="netwerk-container">
-          <h3 class="title-brown">Samenwerking met bekenden</h3>
-          <p>Plantijn werkte nauw samen met vooraanstaande denkers en humanisten van zijn tijd, waaronder grote namen
-            als Justus
-            Lipsius, Lodovico Guicciardini, Erasmus,... Door hun invloedrijke werken te drukken, trok hij de aandacht
-            van zowel
-            geleerden als belangrijke machthebbers, wat hem toegang gaf tot <strong class="highlight-brown">een breed en
-              machtig netwerk</strong> en opende veel
-            nieuwe
-            deuren en kansen. Deze samenwerkingen verhoogden niet alleen zijn status als drukker, maar positioneerden
-            hem ook als
-            een sleutelfiguur in de verspreiding van kennis en ideeën.</p>
+        <div class="grid-netwerkAnimatie container">
+          <div class="lottie-container"></div>
+          <div class="netwerk-container">
+            <h3 class="title-brown">Samenwerking met bekenden</h3>
+            <p>Plantijn werkte nauw samen met vooraanstaande denkers en humanisten van zijn tijd, waaronder grote namen
+              als Justus
+              Lipsius, Lodovico Guicciardini, Erasmus,... Door hun invloedrijke werken te drukken, trok hij de aandacht
+              van zowel
+              geleerden als belangrijke machthebbers, wat hem toegang gaf tot <strong class="highlight-brown">een breed
+                en
+                machtig netwerk</strong> en opende veel
+              nieuwe
+              deuren en kansen. Deze samenwerkingen verhoogden niet alleen zijn status als drukker, maar positioneerden
+              hem ook als
+              een sleutelfiguur in de verspreiding van kennis en ideeën.</p>
+          </div>
         </div>
       </article>
       <article class="container grid-template_textFirst koninklijkeDrukker-article">
@@ -319,7 +326,8 @@
     <section class="daughters-section" id="Nalatenschap-Officina-Plantinia">
       <div class="chapter_Three-quote">
         <h2>Chapter 3</h2>
-        <p class="quote">“Great things in business are never done by one person. They're done by a team of people.”</p>
+        <p class="quote container">“Great things in business are never done by one person. They're done by a team of
+          people.”</p>
         <p class="quote-name">~ Steve Jobs ~</p>
       </div>
       <article class="grid-template_imgFirst container">
@@ -497,14 +505,15 @@
       src/assets/img/Facebook-w_large.svg" src="src/assets/img/Facebook-w_large.svg" alt="Facebook">
           </picture>
         </a></dd>
-      <li class="footer_item-socials"><a href="">
+      <li class="footer_item-socials"><a href="https://www.instagram.com/plantinmoretus">
           <picture>
             <img sizes="(max-width: 36px) 100vw, 36px" srcset="
       src/assets/img/Instagram-w_small.svg 20w,
       src/assets/img/Instagram-w_large.svg 36w" src="src/assets/img/Instagram-w_large.svg" alt="Instagram">
           </picture>
         </a></li>
-      <li class="footer_item-socials"><a href="">
+      <li class="footer_item-socials"><a
+          href="https://museumplantinmoretus.us7.list-manage.com/subscribe?u=72a218618445dea8de0fcb858&id=7c6893d303">
           <picture>
             <img sizes="(max-width: 40px) 100vw, 40px" srcset="
       src/assets/img/Mail-w_small.svg 22w,

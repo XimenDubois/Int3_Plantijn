@@ -1,3 +1,5 @@
+
+
 const init = () => {
 
     const $navButton = document.querySelector('.nav__button');
@@ -8,6 +10,8 @@ const init = () => {
     const listItems = $navList.querySelectorAll("li a");
     const $navSmallElements = document.querySelectorAll('.nav-small_open');
     const $polyglotBijbel = document.querySelector('.polyglot-bijbel_image');
+    const $netwerkContainer = document.querySelector('.grid-netwerkAnimatie');
+
 
     console.log($polyglotBijbel);
 
@@ -16,13 +20,14 @@ const init = () => {
         if (event.matches) {
             $navButton.classList.remove('hidden');
             $navSmall.classList.remove('hidden');
-            $navMenu.classList.add("hidden");
-            $polyglotBijbel.classList.add("hidden");
+            $navMenu.classList.add('hidden');
+            $polyglotBijbel.classList.add('hidden');
         } else {
             $navButton.classList.add('hidden');
-            $navMenu.classList.remove("hidden");
+            $navMenu.classList.remove('hidden');
             $navSmall.classList.add('hidden');
-            $polyglotBijbel.classList.remove("hidden");
+            $polyglotBijbel.classList.remove('hidden');
+            $netwerkContainer.classList.add('grid-netwerkAnimatie')
         }
     };
 
@@ -160,4 +165,34 @@ allDTs.forEach(dt => {
 // Initialiseer de hidden klasse bij paginalaad
 updateHiddenState();
 
+
+////////lottie animatie
+let mm = gsap.matchMedia();
+
+const animation = lottie.loadAnimation({
+    container: document.querySelector('.lottie-container'),
+    renderer: 'svg',
+    autoplay: false,
+    path: 'src/assets/lottie/PlantijnNetwerkFinalAnimation.json'
+});
+
+gsap.registerPlugin(ScrollTrigger);
+let lottieScrollTrigger = ScrollTrigger.create({
+    trigger: ".lottie-container",
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "top+=2000 top",
+    pin: true,
+    onUpdate: function (self) {
+        const progress = self.progress;
+        animation.goToAndStop(animation.totalFrames * progress, true);
+    },
+});
+mm.add("(max-width: 60em)", () => {
+    lottieScrollTrigger.kill();
+    lottieScrollTrigger = null;
+    animation.play();
+
+});
 init();

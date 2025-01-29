@@ -407,6 +407,12 @@ h3 {
   margin-bottom: var(--whitespace-regular);
 }
 
+.lottie-container {
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+}
+
 .slider-container {
   display: flex;
   flex-direction: column;
@@ -487,12 +493,30 @@ footer {
     margin-top: 0vh;
   }
 
+  .lottie-container {
+    height: auto;
+    width: auto;
+  }
+
   .world-text {
     width: 100%;
+  }
+
+  .netwerk-container {
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 60em) {
+  .grid-netwerkAnimatie {
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lottie-container {
+    margin-bottom: var(--whitespace-regular);
+  }
 
   h1,
   h3 {
@@ -594,10 +618,11 @@ footer {
     transform: scale(1.02);
     transition: 0.3s ease-in-out;
   }
-    .footer_list-socials {
-      gap: var(--whitespace-regular);
-      max-width: 75%;
-      align-content: center;
-      margin: auto;
-    }
+
+  .footer_list-socials {
+    gap: var(--whitespace-regular);
+    max-width: 75%;
+    align-content: center;
+    margin: auto;
+  }
 }
