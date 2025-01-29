@@ -381,8 +381,8 @@
           <p><span id="ageDisplay">4 </span> jaar</p>
         </div>
       </article>
-      <article class="container grid-template">
-        <img src="" alt="language stats">
+      <article class="container grid-container_piechard">
+        <div class="pie-chard"></div>
         <div>
           <h3 class="title-brown">Opleiding dochters</h3>
           <p>Plantijn stelde een <strong class="highlight-brown">strikt dagelijks schema</strong> op waarin onderwijs en
@@ -395,24 +395,50 @@
           </p>
         </div>
       </article>
-      <article class="container grid-template">
-        <div>
-          <h3 class="title-brown">Uitkiezen schoonzonen</h3>
-          <p>Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming. Drie van hen traden toe
-            tot het
-            bedrijf, terwijl een vierde actief was in de kant- en linnenhandel. Zijn meest geliefde schoonzoon, Jan
-            Moretus (geboren
-            als Jan Moerentorf), begon op veertienjarige leeftijd in het bedrijf en werd uiteindelijk zijn opvolger. Na
-            Plantijns
-            overlijden in 1589 nam Moretus de leiding over en leidde de drukkerij naar nieuwe hoogten.</p>
-        </div>
-        <div>
-          <img src="" alt="Gilles">
-          <p>Gilles</p>
-          <img src="" alt="Jan">
-          <p>Jan</p>
-          <img src="" alt="Franciscus">
-          <p>Franciscus</p>
+      <article class="container schoonzonen-article">
+        <div class="grid-template_schoonzonen">
+          <div>
+            <h3 class="title-brown">Uitkiezen schoonzonen</h3>
+            <p>Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming. Drie van hen traden
+              toe
+              tot het
+              bedrijf, terwijl een vierde actief was in de kant- en linnenhandel. Zijn meest geliefde schoonzoon, Jan
+              Moretus (geboren
+              als Jan Moerentorf), begon op veertienjarige leeftijd in het bedrijf en werd uiteindelijk zijn opvolger.
+              Na
+              Plantijns
+              overlijden in 1589 nam Moretus de leiding over en leidde de drukkerij naar nieuwe hoogten.</p>
+          </div>
+          <div class="grid-container_schoonzonen">
+            <div class="grid-item_schoonzonen">
+              <picture>
+                <img sizes="(max-width: 120px) 100vw, 120px" srcset="
+                  src/assets/img/Gilles-w_small.avif 90w,
+                  src/assets/img/Gilles-w_large.avif 120w" src="src/assets/img/Gilles-w_large.avif" alt="Gilles">
+              </picture>
+              <div>Gilles</div>
+            </div>
+
+            <div class="grid-item_schoonzonen">
+              <picture>
+                <img sizes="(max-width: 120px) 100vw, 120px" srcset="
+                  src/assets/img/Jan_Moretus-w_small.avif 90w,
+                  src/assets/img/Jan_Moretus-w_large.avif 120w" src="src/assets/img/Jan_Moretus-w_large.avif"
+                  alt="Jan">
+              </picture>
+              <div>Jan</div>
+            </div>
+
+            <div class="grid-item_schoonzonen">
+              <picture>
+                <img sizes="(max-width: 120px) 100vw, 120px" srcset="
+                  src/assets/img/Franciscus-w_small.avif 90w,
+                  src/assets/img/Franciscus-w_large.avif 120w" src="src/assets/img/Franciscus-w_large.avif"
+                  alt="Franciscus">
+              </picture>
+              <div>Franciscus</div>
+            </div>
+          </div>
         </div>
       </article>
     </section>
@@ -449,12 +475,94 @@
           alt="Plantin Moretus museum">
       </picture>
     </section>
-    <section class="container">
-      <div class="stories-text">
-        <h3 class="title-brown">Verhalen die geschiedenis ademen</h3>
-        <p>Ben je benieuwd naar de <strong class="highlight-brown">boeiende en verrassende verhalen</strong> die het
-          museum te bieden heeft? Ontdek ze hier!</p>
-      </div>
+    <section class="stories-container container">
+      <article>
+        <div class="stories-text">
+          <h3 class="title-brown">Verhalen die geschiedenis ademen</h3>
+          <p>Ben je benieuwd naar de <strong class="highlight-brown">boeiende en verrassende verhalen</strong> die het
+            museum te bieden heeft? Ontdek ze hier!</p>
+        </div>
+        <div class="grid-container_story">
+          <div class="grid-item_story">
+            <div class="name">Christoffel Plantijn</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+                                    src/assets/img/Plantijn_story-w_small.avif 100w,
+                                    src/assets/img/Plantijn_story-w_medium.avif 156w,
+                                    src/assets/img/Plantijn_story-w_large.avif 200w"
+                  src="src/assets/img/Plantijn_story-w_large.avif" alt="Christoffel Plantijn">
+              </picture>
+            </a>
+          </div>
+
+          <div class="grid-item_story">
+            <div class="name">Jan Moretus</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+                        src/assets/img/Jan_story-w_small.avif 100w,
+                        src/assets/img/Jan_story-w_medium.avif 156w,
+                        src/assets/img/Jan_story-w_large.avif 200w" src="src/assets/img/Jan_story-w_large.avif"
+                  alt="Jan Moretus">
+              </picture>
+            </a>
+          </div>
+
+          <div class="grid-item_story">
+            <div class="name">De 9 generaties</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+            src/assets/img/9Gens_story-w_small.avif 100w,
+            src/assets/img/9Gens_story-w_medium.avif 156w,
+            src/assets/img/9Gens_story-w_large.avif 200w" src="src/assets/img/9Gens_story-w_large.avif"
+                  alt="De 9 Generaties">
+              </picture>
+            </a>
+          </div>
+
+          <div class="grid-item_story">
+            <div class="name">De dood van Jeanne</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+                                    src/assets/img/Jeanne_story-w_small.avif 100w,
+                                    src/assets/img/Jeanne_story-w_medium.avif 156w,
+                                    src/assets/img/Jeanne_story-w_large.avif 200w"
+                  src="src/assets/img/Jeanne_story-w_large.avif" alt="De dood van Jeanne">
+              </picture>
+            </a>
+          </div>
+
+          <div class="grid-item_story">
+            <div class="name">Balthasar I Moretus</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+            src/assets/img/Balthasar_story-w_small.avif 100w,
+            src/assets/img/Balthasar_story-w_medium.avif 156w,
+            src/assets/img/Balthasar_story-w_large.avif 200w" src="src/assets/img/Balthasar_story-w_large.avif"
+                  alt="Balthasar I Moretus">
+              </picture>
+            </a>
+          </div>
+
+          <div class="grid-item_story">
+            <div class="name">Martina Plantijn</div>
+            <a href="">
+              <picture>
+                <img sizes="(max-width: 200px) 100vw, 200px" srcset="
+                                                src/assets/img/Martina_story-w_small.avif 100w,
+                                                src/assets/img/Martina_story-w_medium.avif 156w,
+                                                src/assets/img/Martina_story-w_large.avif 200w"
+                  src="src/assets/img/Martina_story-w_large.avif" alt="Martina">
+              </picture>
+            </a>
+          </div>
+        </div>
+
+      </article>
     </section>
   </main>
   <footer>
