@@ -378,7 +378,7 @@
           <input type="range" min="4" max="12" value="4" class="slider" id="ageSlider" />
         </div>
         <div>
-          <p><span id="ageDisplay">4 </span> jaar</p>
+          <p class="ageDisplayer"><span id="ageDisplay">4 </span> jaar</p>
         </div>
       </article>
       <article class="container grid-container_piechard">
@@ -443,50 +443,59 @@
       </article>
     </section>
     <section class="schoonzoonKiezen-section container">
-      <div class="trouwen-text">
-        <h3 class="title-brown">Kies de schoonzoon</h3>
-        <p>Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming. <strong
-            class="highlight-brown">Kruip in Plantijn
+
+      <h3 class="title-brown trouwen-text">Kies de schoonzoon</h3>
+      <div class="schoonzoonKiezen-container">
+        <p class="trouwen-text">Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming.
+          <strong class="highlight-brown">Kruip in Plantijn
             zijn schoenen en
-            kies zijn schoonzonen uit!</strong></p>
+            kies zijn schoonzonen uit!</strong>
+        </p>
+
+        <dl class="grid-layout_trouwen">
+          <div class="items-container_trouwen">
+            <dt id="person-name">Joannes</dt>
+            <dd>
+              <picture>
+                <img id="person-img" src="src/assets/img/Joannes_Verhoeven-w_large.avif" alt="Joannes Verhoeven">
+              </picture>
+            </dd>
+          </div>
+
+          <div class="items-container_trouwen">
+            <dt>IQ</dt>
+            <dd class="bar" id="iq-bar" style="height: 65%; width: 10vw;">
+              <span class="hidden">65</span>
+            </dd>
+          </div>
+
+          <div class="items-container_trouwen">
+            <dt class="kwaliteiten_display-taal">Taalvaardigheid</dt>
+            <dd class="bar" id="taalvaardigheid-bar" style="height: 50%; width: 10vw;">
+              <span class="hidden">50</span>
+            </dd>
+          </div>
+
+          <div class="items-container_trouwen">
+            <dt class="kwaliteiten_display-inzichten">Zakelijk inzicht</dt>
+            <dd class="bar" id="zakelijkinzicht-bar" style="height: 30%; width: 10vw;">
+              <span class="hidden">30</span>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="trouwen-Btn">
+          <button class="grey-Btn button">Trouwen</button>
+          <button class="grey-Btn button" id="next-person-btn">Niet Trouwen</button>
+        </div>
       </div>
-      <dl class="grid-layout_trouwen">
-        <div class="items-container_trouwen">
-          <dt id="person-name">Joannes Verhoeven</dt>
-          <dd>
-            <picture>
-              <img id="person-img" src="src/assets/img/Joannes_Verhoeven-w_large.avif" alt="Joannes Verhoeven">
-            </picture>
-          </dd>
+      <div class="gekozen-schoonzoon hidden">
+        <p class="trouwen-text gekozen-schoonzoon-text"></p>
+        <div class="gekozen-schoonzoon-img_container">
+          <img class="gekozen-schoonzoon-img" alt="Afbeelding van de gekozen schoonzoon">
         </div>
 
-        <div class="items-container_trouwen">
-          <dt>IQ</dt>
-          <dd class="bar" id="iq-bar" style="height: 65%; width: 50%;">
-            <span class="hidden">65</span>
-          </dd>
-        </div>
-
-        <div class="items-container_trouwen">
-          <dt>Taalvaardigheid</dt>
-          <dd class="bar" id="taalvaardigheid-bar" style="height: 50%; width: 50%;">
-            <span class="hidden">50</span>
-          </dd>
-        </div>
-
-        <div class="items-container_trouwen">
-          <dt>Zakelijk inzicht</dt>
-          <dd class="bar" id="zakelijkinzicht-bar" style="height: 30%; width: 50%;">
-            <span class="hidden">30</span>
-          </dd>
-        </div>
-      </dl>
-
-      <div class="trouwen-Btn">
-        <button class="grey-Btn button">Trouwen</button>
-        <button class="grey-Btn button" id="next-person-btn">Niet Trouwen</button>
       </div>
-
     </section>
     <section class="container grid-template_textFirst">
       <div>

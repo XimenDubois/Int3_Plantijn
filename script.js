@@ -9,6 +9,7 @@ const init = () => {
     allDTs.forEach(dt => {
         dt.addEventListener('click', toggleDD);
     });
+    updateKwaliteitNaam();
 };
 
 const $navButton = document.querySelector('.nav__button');
@@ -23,28 +24,28 @@ const $netwerkContainer = document.querySelector('.grid-netwerkAnimatie');
 let huidigeSchoonzoonIndex = 0;
 const schoonZonen = [
     {
-        naam: "Joannes Verhoeven",
+        naam: "Joannes",
         afbeelding: "src/assets/img/Joannes_Verhoeven-w_large.avif",
         iq: "65%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "40%",
     },
     {
-        naam: "Jan Moretus",
+        naam: "Jan",
         afbeelding: "src/assets/img/Jan_Marryme-w_large.avif",
         iq: "85%",
         taalvaardigheid: "90%",
         zakelijkInzicht: "96%",
     },
     {
-        naam: "Mona Lisa",
+        naam: "Lisa",
         afbeelding: "src/assets/img/Mona_Lisa-w_large.avif",
         iq: "95%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "15%",
     },
     {
-        naam: "Adriaan de Lange",
+        naam: "Adriaan",
         afbeelding: "src/assets/img/Adriaan-w_large.avif",
         iq: "55%",
         taalvaardigheid: "70%",
@@ -197,6 +198,48 @@ document.getElementById('next-person-btn').addEventListener('click', () => {
     document.getElementById('zakelijkinzicht-bar').style.height = schoonzoon.zakelijkInzicht;
 });
 
+function updateKwaliteitNaam() {
+    const kwaliteitElement_taal = document.querySelector('.kwaliteiten_display-taal');
+    const kwaliteitElement_inzichten = document.querySelector('.kwaliteiten_display-inzichten');
+
+    if (window.innerWidth < 960) {
+        kwaliteitElement_taal.textContent = 'Taal';
+        kwaliteitElement_inzichten.textContent = 'Inzichten';
+    } else {
+        kwaliteitElement_taal.textContent = 'Taalvaardigheid';
+        kwaliteitElement_inzichten.textContent = 'Zakelijke Inzichten';
+    }
+}
+
+window.addEventListener('resize', updateKwaliteitNaam);
+
+// Wanneer de "Trouwen" knop wordt ingedrukt:
+document.querySelector('.trouwen-Btn .grey-Btn').addEventListener('click', () => {
+    const schoonzoon = schoonZonen[huidigeSchoonzoonIndex];
+
+    // Verberg de tabel en de knoppen
+    document.querySelector('.schoonzoonKiezen-container').classList.add('hidden');
+
+    // Verkrijg de verborgen sectie en pas de inhoud aan
+    const gekozenSchoonzoonSection = document.querySelector('.gekozen-schoonzoon');
+    const gekozenSchoonzoonText = document.querySelector('.gekozen-schoonzoon-text');
+    const gekozenSchoonzoonImg = document.querySelector('.gekozen-schoonzoon-img');
+
+    // Vul de inhoud van de nieuwe sectie
+    if (schoonzoon.naam === 'Jan') {
+        gekozenSchoonzoonText.innerHTML = `Gefeliciteerd! Je hebt gekozen voor ${schoonzoon.naam} net zoals Christoffel Plantijn`;
+    } else {
+        gekozenSchoonzoonText.innerHTML = `Je hebt gekozen voor ${schoonzoon.naam}. Christoffel Plantijn koos helaas niet de zelfde, hij koos Jan!`;
+    }
+
+    gekozenSchoonzoonImg.src = schoonzoon.afbeelding;
+    gekozenSchoonzoonImg.alt = schoonzoon.naam;
+
+    // Verwijder de 'hidden' klasse zodat de sectie zichtbaar wordt
+    gekozenSchoonzoonSection.classList.remove('hidden');
+});
+
+
 ////////Animaties
 
 gsap.registerPlugin(ScrollTrigger);
@@ -245,13 +288,13 @@ gsap.utils.toArray('.bar').forEach(bar => {
     bar.style.height = "0%"; // Zet de startwaarde op 0%
 
     gsap.to(bar, {
-        height: targetHeight, 
+        height: targetHeight,
         duration: 1.5,
-        ease: "power2.out", 
+        ease: "power2.out",
         scrollTrigger: {
             trigger: ".bar",
-            start: "top 80%", 
-            toggleActions: "play none none none", 
+            start: "top 80%",
+            toggleActions: "play none none none",
         }
     });
 });
@@ -260,5 +303,11 @@ mm.add("(max-width: 60em)", () => {
     netwerkAnimatie.play();
 });
 
+////fix voor sidescroll bug op ios
+window.addEventListener('scroll', function () {
+    if (window.scrollX !== 0) {
+        window.scrollTo(0, window.scrollY);
+    }
+})
 
 init();

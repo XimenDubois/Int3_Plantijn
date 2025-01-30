@@ -425,19 +425,35 @@ h3 {
 }
 
 .slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 50%;
+  max-width: 40%;
   margin-top: var(--whitespace-l);
   margin-bottom: var(--whitespace-l)
 }
 
-.slider {
-  background: var(--color-text);
-  outline: none;
-  transition: 0.3s ease-in-out;
+.sentencesPerAge,
+.ageDisplayer {
+  text-align: center;
 }
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 1vh;
+  height: 0.5vh;
+  background: var(--color-second-background);
+  margin-top: var(--whitespace-regular);
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: var(--color-title);
+  border-radius: 50%;
+  width: 2vh;
+  height: 2vh;
+}
+
+
 
 .grid-container_piechard {
   display: grid;
@@ -477,18 +493,21 @@ h3 {
 }
 
 .trouwen-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   margin: auto;
+  text-align: center;
   max-width: 75%;
-  margin-bottom: var(--whitespace-medium);
+}
+
+.gekozen-schoonzoon-img_container {
+  margin-top: var(--whitespace-regular);
+  margin-bottom: var(--whitespace-l);
+  display: flex;
+  justify-content: center;
 }
 
 .grid-layout_trouwen {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
@@ -499,9 +518,11 @@ h3 {
   gap: var(--whitespace-s);
   align-items: center;
 }
-.bar{
+
+.bar {
   background-color: var(--color-title);
 }
+
 .trouwen-Btn {
   margin-top: var(--whitespace-medium);
   margin-bottom: var(--whitespace-l);
