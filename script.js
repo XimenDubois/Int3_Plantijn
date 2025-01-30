@@ -11,8 +11,9 @@ const init = () => {
     });
     updateKwaliteitNaam();
 
-
     textElements.forEach(text => animateTextIn(text));
+    animatePortrets('.motherdaughter_grid');
+    animatePortrets('.grid-container_schoonzonen');
 };
 
 const $navButton = document.querySelector('.nav__button');
@@ -123,11 +124,11 @@ $enveloppe.addEventListener('click', function () {
 
 ///////Lettertype veranderen bij PolyGlot Bijbel
 const styles = [
-    { font: 'Roboto, sans-serif', text: 'Hebreeuwse Typo' },
-    { font: '"Playfair Display", serif', text: 'Griekse Typo' },
-    { font: '"Courier Prime", monospace', text: 'Latijnse Typo' },
-    { font: 'Arial, sans-serif', text: 'Aramese Typo' },
-    { font: 'Georgia, serif', text: 'Syrische Typo' }
+    { font: '"David Libre", serif', text: 'Hebreeuwse Typo' },
+    { font: '"GFS Neohellenic", serif', text: 'Griekse Typo' },
+    { font: '"EB Garamond", serif', text: 'Latijnse Typo' },
+    { font: '"Merriweather", serif', text: 'Aramese Typo' },
+    { font: '"Scheherazade New", serif', text: 'Syrische Typo' }
 ];
 
 let currentFontIndex = 0;
@@ -308,6 +309,22 @@ mm.add("(max-width: 60em)", () => {
     netwerkAnimatie.play();
 });
 
+// 
+gsap.fromTo('.worldOnAString-img', {
+    x: '10vw',  // Start buiten beeld aan de linkerkant
+}, {
+    x: '0',  // Beweeg naar zijn oorspronkelijke positie
+    duration: 1,  // Duur van de beweging (voor snelle scroll)
+    ease: 'power3.out',  // Zachte en natuurlijke overgang
+    scrollTrigger: {
+        trigger: '.worldOnAString-img',
+        start: "top 80%",  // Start de animatie wanneer 80% van het beeld bereikt is
+        end: "bottom 20%",  // Eindigt op 20% voorbij het element
+        scrub: 1,  // Koppel de animatie aan de scrollpositie
+        markers: false  // Zet markers op true voor debugging (optioneel)
+    }
+});
+
 
 const animateTextIn = (text) => {
     gsap.fromTo(text, {
@@ -325,13 +342,25 @@ const animateTextIn = (text) => {
         }
     });
 }
+const animatePortrets = (containerSelector) => {
+    gsap.fromTo(`${containerSelector} .portretAnimation`, {
+        y: '3vw',
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.3,
+        scrollTrigger: {
+            trigger: containerSelector,
+            start: "top 80%",
+            end: "bottom 20%",
+        }
+    });
+};
 
-////fix voor sidescroll bug op ios
-window.addEventListener('scroll', function () {
-    if (window.scrollX !== 0) {
-        window.scrollTo(0, window.scrollY);
-    }
-})
+
 
 
 
