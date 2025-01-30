@@ -10,6 +10,9 @@ const init = () => {
         dt.addEventListener('click', toggleDD);
     });
     updateKwaliteitNaam();
+
+
+    textElements.forEach(text => animateTextIn(text));
 };
 
 const $navButton = document.querySelector('.nav__button');
@@ -21,6 +24,8 @@ const listItems = $navList.querySelectorAll("li a");
 const $navSmallElements = document.querySelectorAll('.nav-small_open');
 const $polyglotBijbel = document.querySelector('.polyglot-bijbel_image');
 const $netwerkContainer = document.querySelector('.grid-netwerkAnimatie');
+const textElements = document.querySelectorAll('.header-text, .moving-text, .worldText-container, .impact-text, .netwerk-container, .longRead-bug, .polyglotBijbel-text_container, .dochters-text, .opleiding-text, .schoonzonen-text, .officina-text');
+
 let huidigeSchoonzoonIndex = 0;
 const schoonZonen = [
     {
@@ -303,11 +308,31 @@ mm.add("(max-width: 60em)", () => {
     netwerkAnimatie.play();
 });
 
+
+const animateTextIn = (text) => {
+    gsap.fromTo(text, {
+        x: '-2vw',
+        opacity: 0,
+    }, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: text, // Het element zelf is de trigger
+            start: "top 80%",  // Start de animatie wanneer het element 80% van de viewport bereikt
+            end: "bottom 20%", // Eindig de animatie wanneer het element 20% van de viewport bereikt
+        }
+    });
+}
+
 ////fix voor sidescroll bug op ios
 window.addEventListener('scroll', function () {
     if (window.scrollX !== 0) {
         window.scrollTo(0, window.scrollY);
     }
 })
+
+
 
 init();
