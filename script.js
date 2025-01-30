@@ -20,8 +20,40 @@ const listItems = $navList.querySelectorAll("li a");
 const $navSmallElements = document.querySelectorAll('.nav-small_open');
 const $polyglotBijbel = document.querySelector('.polyglot-bijbel_image');
 const $netwerkContainer = document.querySelector('.grid-netwerkAnimatie');
+let huidigeSchoonzoonIndex = 0;
+const schoonZonen = [
+    {
+        naam: "Joannes Verhoeven",
+        afbeelding: "src/assets/img/Joannes_Verhoeven-w_large.avif",
+        iq: "65%",
+        taalvaardigheid: "50%",
+        zakelijkInzicht: "40%",
+    },
+    {
+        naam: "Jan Moretus",
+        afbeelding: "src/assets/img/Jan_Marryme-w_large.avif",
+        iq: "85%",
+        taalvaardigheid: "90%",
+        zakelijkInzicht: "96%",
+    },
+    {
+        naam: "Mona Lisa",
+        afbeelding: "src/assets/img/Mona_Lisa-w_large.avif",
+        iq: "95%",
+        taalvaardigheid: "50%",
+        zakelijkInzicht: "15%",
+    },
+    {
+        naam: "Adriaan de Lange",
+        afbeelding: "src/assets/img/Adriaan-w_large.avif",
+        iq: "55%",
+        taalvaardigheid: "70%",
+        zakelijkInzicht: "30%",
+    }
+];
 
-console.log($polyglotBijbel);
+
+
 
 const hambergerMediaQuery = window.matchMedia("(max-width: 60em)");
 
@@ -104,15 +136,15 @@ button.addEventListener('click', () => {
 
 ////////////Age Slider
 const sentences = {
-    4: "Ik",
-    5: "Ik kan",
-    6: "Ik kan lezen",
-    7: "Ik kan goed lezen",
-    8: "Ik kan goed lezen en schrijven",
-    9: "Ik kan goed lezen en schrijven in twee talen",
-    10: "Ik kan goed lezen en schrijven in drie talen",
-    11: "Ik kan goed lezen en schrijven in vier talen",
-    12: "Ik kan perfect lezen en schrijven in vier talen"
+    4: '"Ik"',
+    5: '"Ik kan"',
+    6: '"Ik kan lezen"',
+    7: '"Ik kan goed lezen"',
+    8: '"Ik kan goed lezen en schrijven"',
+    9: '"Ik kan goed lezen en schrijven in twee talen"',
+    10: '"Ik kan goed lezen en schrijven in drie talen"',
+    11: '"Ik kan goed lezen en schrijven in vier talen"',
+    12: '"Ik kan perfect lezen en schrijven in vier talen"'
 };
 
 const slider = document.getElementById("ageSlider");
@@ -125,55 +157,52 @@ slider.addEventListener("input", () => {
     sentencesPerAge.textContent = sentences[age];
 });
 
-// Functie om de hidden klasse toe te voegen aan alle <dd>'s
+
 function updateHiddenState() {
     const allDDs = document.querySelectorAll('.footer_item');
     const isSmallScreen = window.matchMedia('(max-width: 60em)').matches;
 
     allDDs.forEach(dd => {
         if (isSmallScreen) {
-            dd.classList.add('hidden'); // Voeg de hidden klasse toe
+            dd.classList.add('hidden');
         } else {
-            dd.classList.remove('hidden'); // Verwijder de hidden klasse als scherm groter is
+            dd.classList.remove('hidden');
         }
     });
 }
 
-// Functie om de hidden klasse te toggelen op klikken
+
 function toggleDD(event) {
     const parentDL = event.target.closest('dl');
     const ddItems = parentDL.querySelectorAll('.footer_item');
 
     ddItems.forEach(dd => {
-        dd.classList.toggle('hidden'); // Toggle de hidden klasse
+        dd.classList.toggle('hidden');
     });
 }
 
-// Event listener voor klikken op <dt> of <h4>
 const allDTs = document.querySelectorAll('.footer_list dt');
+/////////////Schoonzoon spel
+document.getElementById('next-person-btn').addEventListener('click', () => {
+    huidigeSchoonzoonIndex = (huidigeSchoonzoonIndex + 1) % schoonZonen.length; // Volgende persoon
 
-////////Lottie Animatie
+    const schoonzoon = schoonZonen[huidigeSchoonzoonIndex];
+
+    document.getElementById('person-name').textContent = schoonzoon.naam;
+    document.getElementById('person-img').src = schoonzoon.afbeelding;
+    document.getElementById('person-img').alt = schoonzoon.naam;
+
+    document.getElementById('iq-bar').style.height = schoonzoon.iq;
+    document.getElementById('taalvaardigheid-bar').style.height = schoonzoon.taalvaardigheid;
+    document.getElementById('zakelijkinzicht-bar').style.height = schoonzoon.zakelijkInzicht;
+});
+
+////////Animaties
 
 gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 
-const pieChardAnimation = lottie.loadAnimation({
-    container: document.querySelector('.pie-chard'),
-    renderer: 'svg',
-    autoplay: false,
-    loop: false,
-    path: 'src/assets/lottie/Pie_Chard.json'
-});
 
-ScrollTrigger.create({
-    trigger: ".grid-container_piechard",
-    markers: true,
-    start: "top 50%",
-    once: true,
-    onEnter: () => {
-        pieChardAnimation.play();
-    }
-});
 
 const netwerkAnimatie = lottie.loadAnimation({
     container: document.querySelector('.lottie-container'),
@@ -186,14 +215,46 @@ const netwerkAnimatieScrollTrigger = ScrollTrigger.create({
     trigger: ".lottie-container",
     scrub: true,
     start: "top top",
-    end: "top+=2000 top",
     pin: true,
     onUpdate: function (self) {
-        const progress = self.progress;
+        const progress = self.progress * 0.99;
         netwerkAnimatie.goToAndStop(netwerkAnimatie.totalFrames * progress, true);
     },
+    OnLeave: () => {
+        ScrollTrigger.refresh();
+    }
+});
+const pieChardAnimation = lottie.loadAnimation({
+    container: document.querySelector('.pie-chard'),
+    renderer: 'svg',
+    autoplay: false,
+    loop: false,
+    path: 'src/assets/lottie/Pie_Chard.json'
 });
 
+ScrollTrigger.create({
+    trigger: ".grid-container_piechard",
+    start: "top 50%",
+    once: true,
+    onEnter: () => {
+        pieChardAnimation.play();
+    }
+});
+gsap.utils.toArray('.bar').forEach(bar => {
+    let targetHeight = bar.style.height; // Haal het percentage van inline style
+    bar.style.height = "0%"; // Zet de startwaarde op 0%
+
+    gsap.to(bar, {
+        height: targetHeight, 
+        duration: 1.5,
+        ease: "power2.out", 
+        scrollTrigger: {
+            trigger: ".bar",
+            start: "top 80%", 
+            toggleActions: "play none none none", 
+        }
+    });
+});
 mm.add("(max-width: 60em)", () => {
     netwerkAnimatieScrollTrigger.kill();
     netwerkAnimatie.play();

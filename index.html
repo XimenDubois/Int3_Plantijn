@@ -373,7 +373,7 @@
       </article>
       <article class="slider-container container">
         <h4 class="hidden">Age slider</h4>
-        <p class="sentencesPerAge">Ik</p>
+        <p class="sentencesPerAge">"Ik"</p>
         <div>
           <input type="range" min="4" max="12" value="4" class="slider" id="ageSlider" />
         </div>
@@ -443,12 +443,50 @@
       </article>
     </section>
     <section class="schoonzoonKiezen-section container">
-      <h3 class="title-brown">Kies de schoonzoon</h3>
-      <p>Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming. <strong>Kruip in Plantijn
-          zijn schoenen en
-          kies zijn schoonzonen uit!</strong></p>
-      <button class="grey-Btn button">Trouwen</button>
-      <button class="grey-Btn button">Niet Trouwen</button>
+      <div class="trouwen-text">
+        <h3 class="title-brown">Kies de schoonzoon</h3>
+        <p>Plantijn koos zijn schoonzonen met het oog op de continuïteit van zijn onderneming. <strong
+            class="highlight-brown">Kruip in Plantijn
+            zijn schoenen en
+            kies zijn schoonzonen uit!</strong></p>
+      </div>
+      <dl class="grid-layout_trouwen">
+        <div class="items-container_trouwen">
+          <dt id="person-name">Joannes Verhoeven</dt>
+          <dd>
+            <picture>
+              <img id="person-img" src="src/assets/img/Joannes_Verhoeven-w_large.avif" alt="Joannes Verhoeven">
+            </picture>
+          </dd>
+        </div>
+
+        <div class="items-container_trouwen">
+          <dt>IQ</dt>
+          <dd class="bar" id="iq-bar" style="height: 65%; width: 50%;">
+            <span class="hidden">65</span>
+          </dd>
+        </div>
+
+        <div class="items-container_trouwen">
+          <dt>Taalvaardigheid</dt>
+          <dd class="bar" id="taalvaardigheid-bar" style="height: 50%; width: 50%;">
+            <span class="hidden">50</span>
+          </dd>
+        </div>
+
+        <div class="items-container_trouwen">
+          <dt>Zakelijk inzicht</dt>
+          <dd class="bar" id="zakelijkinzicht-bar" style="height: 30%; width: 50%;">
+            <span class="hidden">30</span>
+          </dd>
+        </div>
+      </dl>
+
+      <div class="trouwen-Btn">
+        <button class="grey-Btn button">Trouwen</button>
+        <button class="grey-Btn button" id="next-person-btn">Niet Trouwen</button>
+      </div>
+
     </section>
     <section class="container grid-template_textFirst">
       <div>
@@ -485,7 +523,7 @@
         <div class="grid-container_story">
           <div class="grid-item_story">
             <div class="name">Christoffel Plantijn</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
                                     src/assets/img/Plantijn_story-w_small.avif 100w,
@@ -498,7 +536,7 @@
 
           <div class="grid-item_story">
             <div class="name">Jan Moretus</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
                         src/assets/img/Jan_story-w_small.avif 100w,
@@ -511,7 +549,7 @@
 
           <div class="grid-item_story">
             <div class="name">De 9 generaties</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
             src/assets/img/9Gens_story-w_small.avif 100w,
@@ -524,7 +562,7 @@
 
           <div class="grid-item_story">
             <div class="name">De dood van Jeanne</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
                                     src/assets/img/Jeanne_story-w_small.avif 100w,
@@ -537,7 +575,7 @@
 
           <div class="grid-item_story">
             <div class="name">Balthasar I Moretus</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
             src/assets/img/Balthasar_story-w_small.avif 100w,
@@ -550,7 +588,7 @@
 
           <div class="grid-item_story">
             <div class="name">Martina Plantijn</div>
-            <a href="">
+            <a href="" class="story-item">
               <picture>
                 <img sizes="(max-width: 200px) 100vw, 200px" srcset="
                                                 src/assets/img/Martina_story-w_small.avif 100w,

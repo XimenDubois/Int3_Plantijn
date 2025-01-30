@@ -27,6 +27,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -50,7 +51,7 @@ body {
   background-color: var(--color-background);
   line-height: 135%;
   font-size: var(--fs-regular);
-  overflow-x: hidden;
+
 }
 
 html,
@@ -289,6 +290,7 @@ h3 {
   padding: 1vh;
   transition: 0.2s ease-in-out;
   text-align: center;
+
 }
 
 .readmore-btn:hover {
@@ -345,7 +347,12 @@ h3 {
 
 .worldOnAString-img {
   margin: -15vh -10vh 0 0;
+  overflow: hidden;
   z-index: 1;
+}
+
+.worldwide-section {
+  max-width: 100%;
 }
 
 .worldText-container {
@@ -415,7 +422,6 @@ h3 {
 .lottie-container {
   height: 100vh;
   width: auto;
-  overflow: hidden;
 }
 
 .slider-container {
@@ -423,6 +429,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   max-width: 50%;
+  margin-top: var(--whitespace-l);
+  margin-bottom: var(--whitespace-l)
 }
 
 .slider {
@@ -430,14 +438,17 @@ h3 {
   outline: none;
   transition: 0.3s ease-in-out;
 }
+
 .grid-container_piechard {
   display: grid;
   grid-template-columns: 45% 55%;
   align-items: center;
 }
-.pie-chard{
+
+.pie-chard {
   max-width: 70%;
 }
+
 .schoonzonen-article {
   margin-top: var(--whitespace-l);
   margin-bottom: var(--whitespace-l);
@@ -463,6 +474,40 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.trouwen-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  max-width: 75%;
+  margin-bottom: var(--whitespace-medium);
+}
+
+.grid-layout_trouwen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.items-container_trouwen {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--whitespace-s);
+  align-items: center;
+}
+.bar{
+  background-color: var(--color-title);
+}
+.trouwen-Btn {
+  margin-top: var(--whitespace-medium);
+  margin-bottom: var(--whitespace-l);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .YearOfPlantinia-btn {
@@ -503,6 +548,15 @@ h3 {
   gap: 1vh;
   flex-direction: column;
   align-items: center;
+}
+
+.story-item {
+  transition: 0.3s ease-in-out;
+}
+
+.story-item:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 footer {
@@ -622,9 +676,11 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .grid-container_schoonzonen{
+
+  .grid-container_schoonzonen {
     gap: var(--whitespace-l);
   }
+
   .grid-template_antwerp-statue {
     display: flex;
     flex-direction: column-reverse;
@@ -658,10 +714,12 @@ footer {
     justify-content: space-around;
     align-items: center;
   }
-  .grid-container_piechard{
+
+  .grid-container_piechard {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .grid-container_story {
     grid-template-columns: repeat(2, 1fr);
   }
