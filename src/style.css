@@ -492,6 +492,7 @@ h3 {
 
 .trouwen-text {
   margin: auto;
+  margin-bottom: var(--whitespace-medium);
   text-align: center;
   max-width: 75%;
 }
@@ -693,6 +694,7 @@ footer {
   .grid-template_textFirst,
   .grid-template_schoonzonen {
     display: flex;
+    gap: var(--whitespace-l);
     flex-direction: column;
   }
 
@@ -709,7 +711,6 @@ footer {
     width: 100%;
   }
 
-
   .netwerk-container {
     max-width: 100%
   }
@@ -725,7 +726,6 @@ footer {
     align-items: center;
   }
 
-
   .motherdaughter_grid {
     display: flex;
     flex-direction: row;
@@ -738,7 +738,9 @@ footer {
     display: flex;
     flex-direction: column-reverse;
   }
-
+  .pie-chard{
+    margin-top: var(--whitespace-medium);
+  }
   .grid-container_story {
     grid-template-columns: repeat(2, 1fr);
   }

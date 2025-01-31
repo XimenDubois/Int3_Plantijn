@@ -165,7 +165,7 @@ slider.addEventListener("input", () => {
 });
 
 
-function updateHiddenState() {
+const updateHiddenState = () => {
     const allDDs = document.querySelectorAll('.footer_item');
     const isSmallScreen = window.matchMedia('(max-width: 60em)').matches;
 
@@ -179,7 +179,7 @@ function updateHiddenState() {
 }
 
 
-function toggleDD(event) {
+const toggleDD = (event) => {
     const parentDL = event.target.closest('dl');
     const ddItems = parentDL.querySelectorAll('.footer_item');
 
@@ -204,7 +204,7 @@ document.getElementById('next-person-btn').addEventListener('click', () => {
     document.getElementById('zakelijkinzicht-bar').style.height = schoonzoon.zakelijkInzicht;
 });
 
-function updateKwaliteitNaam() {
+const updateKwaliteitNaam = () => {
     const kwaliteitElement_taal = document.querySelector('.kwaliteiten_display-taal');
     const kwaliteitElement_inzichten = document.querySelector('.kwaliteiten_display-inzichten');
 
@@ -269,9 +269,6 @@ const netwerkAnimatieScrollTrigger = ScrollTrigger.create({
         const progress = self.progress * 0.99;
         netwerkAnimatie.goToAndStop(netwerkAnimatie.totalFrames * progress, true);
     },
-    OnLeave: () => {
-        ScrollTrigger.refresh();
-    }
 });
 const pieChardAnimation = lottie.loadAnimation({
     container: document.querySelector('.pie-chard'),
@@ -311,17 +308,17 @@ mm.add("(max-width: 60em)", () => {
 
 // 
 gsap.fromTo('.worldOnAString-img', {
-    x: '10vw',  // Start buiten beeld aan de linkerkant
+    x: '10vw',
 }, {
-    x: '0',  // Beweeg naar zijn oorspronkelijke positie
-    duration: 1,  // Duur van de beweging (voor snelle scroll)
-    ease: 'power3.out',  // Zachte en natuurlijke overgang
+    x: '0',
+    duration: 1,
+    ease: 'power3.out',
     scrollTrigger: {
         trigger: '.worldOnAString-img',
-        start: "top 80%",  // Start de animatie wanneer 80% van het beeld bereikt is
-        end: "bottom 20%",  // Eindigt op 20% voorbij het element
-        scrub: 1,  // Koppel de animatie aan de scrollpositie
-        markers: false  // Zet markers op true voor debugging (optioneel)
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 1,
+        markers: false
     }
 });
 
@@ -336,9 +333,9 @@ const animateTextIn = (text) => {
         duration: 1,
         ease: 'power3.out',
         scrollTrigger: {
-            trigger: text, // Het element zelf is de trigger
-            start: "top 80%",  // Start de animatie wanneer het element 80% van de viewport bereikt
-            end: "bottom 20%", // Eindig de animatie wanneer het element 20% van de viewport bereikt
+            trigger: text,
+            start: "top 80%",
+            end: "bottom 20%",
         }
     });
 }
@@ -360,8 +357,43 @@ const animatePortrets = (containerSelector) => {
     });
 };
 
+gsap.from(".polyglotFadeIn", {
+    scrollTrigger: {
+        trigger: ".polyglotBijbel-container",
+        start: "top 50%",
+        markers: true,
+        ease: 'power3.out',
+    },
+    opacity: 0
+})
+gsap.from(".enveloppe", {
+    scrollTrigger: {
+        trigger: ".enveloppe",
+        start: "top 50%",
+        markers: true,
+    },
+    ease: 'power3.out',
+    opacity: 0,
+    duration: 1.5,
+    x: "50vw",
+    rotate: "120",
+})
 
 
 
+let tlHeader = gsap.timeline({});
+
+tlHeader.from(".header-image", {
+    x: "7vw",
+    opacity: 0,
+    duration: 1,
+    scale: 0.9,
+    rotate: "5",
+})
+    .from(".readmore-btn_container", {
+    scale: 0,
+    duration: 1.5,
+        ease: "elastic.out(0.9, 0.5)"
+})
 
 init();
