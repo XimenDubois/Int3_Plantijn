@@ -219,19 +219,15 @@ const updateKwaliteitNaam = () => {
 
 window.addEventListener('resize', updateKwaliteitNaam);
 
-// Wanneer de "Trouwen" knop wordt ingedrukt:
 document.querySelector('.trouwen-Btn .grey-Btn').addEventListener('click', () => {
     const schoonzoon = schoonZonen[huidigeSchoonzoonIndex];
 
-    // Verberg de tabel en de knoppen
     document.querySelector('.schoonzoonKiezen-container').classList.add('hidden');
 
-    // Verkrijg de verborgen sectie en pas de inhoud aan
     const gekozenSchoonzoonSection = document.querySelector('.gekozen-schoonzoon');
     const gekozenSchoonzoonText = document.querySelector('.gekozen-schoonzoon-text');
     const gekozenSchoonzoonImg = document.querySelector('.gekozen-schoonzoon-img');
 
-    // Vul de inhoud van de nieuwe sectie
     if (schoonzoon.naam === 'Jan') {
         gekozenSchoonzoonText.innerHTML = `Gefeliciteerd! Je hebt gekozen voor ${schoonzoon.naam} net zoals Christoffel Plantijn`;
     } else {
@@ -241,7 +237,6 @@ document.querySelector('.trouwen-Btn .grey-Btn').addEventListener('click', () =>
     gekozenSchoonzoonImg.src = schoonzoon.afbeelding;
     gekozenSchoonzoonImg.alt = schoonzoon.naam;
 
-    // Verwijder de 'hidden' klasse zodat de sectie zichtbaar wordt
     gekozenSchoonzoonSection.classList.remove('hidden');
 });
 
@@ -287,8 +282,8 @@ ScrollTrigger.create({
     }
 });
 gsap.utils.toArray('.bar').forEach(bar => {
-    let targetHeight = bar.style.height; // Haal het percentage van inline style
-    bar.style.height = "0%"; // Zet de startwaarde op 0%
+    let targetHeight = bar.style.height;
+    bar.style.height = "0%";
 
     gsap.to(bar, {
         height: targetHeight,
@@ -361,7 +356,6 @@ gsap.from(".polyglotFadeIn", {
     scrollTrigger: {
         trigger: ".polyglotBijbel-container",
         start: "top 50%",
-        markers: true,
         ease: 'power3.out',
     },
     opacity: 0
@@ -370,7 +364,6 @@ gsap.from(".enveloppe", {
     scrollTrigger: {
         trigger: ".enveloppe",
         start: "top 50%",
-        markers: true,
     },
     ease: 'power3.out',
     opacity: 0,
@@ -391,9 +384,9 @@ tlHeader.from(".header-image", {
     rotate: "5",
 })
     .from(".readmore-btn_container", {
-    scale: 0,
-    duration: 1.5,
+        scale: 0,
+        duration: 1.5,
         ease: "elastic.out(0.9, 0.5)"
-})
+    })
 
 init();
