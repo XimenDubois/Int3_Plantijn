@@ -31,28 +31,28 @@ let huidigeSchoonzoonIndex = 0;
 const schoonZonen = [
     {
         naam: "Joannes",
-        afbeelding: "/public/assets/img/Joannes_Verhoeven-w_large.avif",
+        afbeelding: "public/assets/img/Joannes_Verhoeven-w_large.avif",
         iq: "65%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "40%",
     },
     {
         naam: "Jan",
-        afbeelding: "/public/assets/img/Jan_Marryme-w_large.avif",
+        afbeelding: "public/assets/img/Jan_Marryme-w_large.avif",
         iq: "85%",
         taalvaardigheid: "90%",
         zakelijkInzicht: "96%",
     },
     {
         naam: "Lisa",
-        afbeelding: "/public/assets/img/Mona_Lisa-w_large.avif",
+        afbeelding: "public/assets/img/Mona_Lisa-w_large.avif",
         iq: "95%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "15%",
     },
     {
         naam: "Adriaan",
-        afbeelding: "/public/assets/img/Adriaan-w_large.avif",
+        afbeelding: "public/assets/img/Adriaan-w_large.avif",
         iq: "55%",
         taalvaardigheid: "70%",
         zakelijkInzicht: "30%",
