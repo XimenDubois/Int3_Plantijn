@@ -252,7 +252,7 @@ const netwerkAnimatie = lottie.loadAnimation({
     container: document.querySelector('.lottie-container'),
     renderer: 'svg',
     autoplay: false,
-    path: 'public/lottie/PlantijnNetwerkFinalAnimation.json'
+    path: '/lottie/PlantijnNetwerkFinalAnimation.json'
 });
 
 const netwerkAnimatieScrollTrigger = ScrollTrigger.create({
@@ -270,7 +270,7 @@ const pieChardAnimation = lottie.loadAnimation({
     renderer: 'svg',
     autoplay: false,
     loop: false,
-    path: 'public/lottie/Pie_Chard.json'
+    path: '/lottie/Pie_Chard.json'
 });
 
 ScrollTrigger.create({
