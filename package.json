@@ -1,14 +1,20 @@
 {
   "name": "integration3-christoffelplantijn",
+  "homepage": "https://XimenDuboi.github.io/Int3_Plantijn/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy:":"gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
