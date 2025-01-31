@@ -45,14 +45,14 @@ const schoonZonen = [
     },
     {
         naam: "Lisa",
-        afbeelding: "src/assets/img/Mona_Lisa-w_large.avif",
+        afbeelding: "assets/img/Mona_Lisa-w_large.avif",
         iq: "95%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "15%",
     },
     {
         naam: "Adriaan",
-        afbeelding: "src/assets/img/Adriaan-w_large.avif",
+        afbeelding: "assets/img/Adriaan-w_large.avif",
         iq: "55%",
         taalvaardigheid: "70%",
         zakelijkInzicht: "30%",
