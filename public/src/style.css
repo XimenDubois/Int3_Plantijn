@@ -59,7 +59,7 @@ body,
 .moving-section,
 .polyglotBijbel-section,
 .nav-small {
-  background-image: url('/assets/img/grain-background.svg');
+  background-image: url('/Int3_Plantijn/assets/img/grain-background.svg');
   background-repeat: repeat;
 }
 
@@ -581,7 +581,7 @@ h3 {
 
 footer {
   background-color: var(--color-second-background);
-  background-image: url('/assets/img/grain-background.svg');
+  background-image: url('/Int3_Plantijn/assets/img/grain-background.svg');
   padding-bottom: var(--whitespace-regular);
 }
 

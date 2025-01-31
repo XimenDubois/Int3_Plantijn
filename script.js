@@ -31,28 +31,28 @@ let huidigeSchoonzoonIndex = 0;
 const schoonZonen = [
     {
         naam: "Joannes",
-        afbeelding: "/assets/img/Joannes_Verhoeven-w_large.avif",
+        afbeelding: "/Int3_Plantijn//assets/img/Joannes_Verhoeven-w_large.avif",
         iq: "65%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "40%",
     },
     {
         naam: "Jan",
-        afbeelding: "assets/img/Jan_Marryme-w_large.avif",
+        afbeelding: "/Int3_Plantijn/assets/img/Jan_Marryme-w_large.avif",
         iq: "85%",
         taalvaardigheid: "90%",
         zakelijkInzicht: "96%",
     },
     {
         naam: "Lisa",
-        afbeelding: "assets/img/Mona_Lisa-w_large.avif",
+        afbeelding: "/Int3_Plantijn/assets/img/Mona_Lisa-w_large.avif",
         iq: "95%",
         taalvaardigheid: "50%",
         zakelijkInzicht: "15%",
     },
     {
         naam: "Adriaan",
-        afbeelding: "assets/img/Adriaan-w_large.avif",
+        afbeelding: "/Int3_Plantijn/assets/img/Adriaan-w_large.avif",
         iq: "55%",
         taalvaardigheid: "70%",
         zakelijkInzicht: "30%",
@@ -252,7 +252,7 @@ const netwerkAnimatie = lottie.loadAnimation({
     container: document.querySelector('.lottie-container'),
     renderer: 'svg',
     autoplay: false,
-    path: '/lottie/PlantijnNetwerkFinalAnimation.json'
+    path: '/Int3_Plantijn/lottie/PlantijnNetwerkFinalAnimation.json'
 });
 
 const netwerkAnimatieScrollTrigger = ScrollTrigger.create({
@@ -270,7 +270,7 @@ const pieChardAnimation = lottie.loadAnimation({
     renderer: 'svg',
     autoplay: false,
     loop: false,
-    path: '/lottie/Pie_Chard.json'
+    path: '/Int3_Plantijn/lottie/Pie_Chard.json'
 });
 
 ScrollTrigger.create({
